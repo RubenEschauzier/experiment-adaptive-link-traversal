@@ -23,7 +23,7 @@
     "@type": "StaticDockerResourceConstraints",
     "cpu_percentage": 100
   },
-  "queryRunnerReplication": 15,
+  "queryRunnerReplication": 5,
   "queryRunnerWarmupRounds": 1,
   "queryRunnerRequestDelay": 2,
   "queryRunnerEndpointAvailabilityCheckTimeout": 1000,
@@ -31,12 +31,12 @@
   "hookSparqlEndpoint": {
     "@id": "urn:jbr:comunica-link-traversal-adaptive-routing:hookSparqlEndpoint",
     "@type": "HookSparqlEndpointComunica",
-    "dockerfileClient": "input/dockerfiles/Dockerfile-client",
+    "dockerfileClient": "input/dockerfiles/Dockerfile-client%FACTOR-fix%",
     "resourceConstraints": {
       "@type": "StaticDockerResourceConstraints",
       "cpu_percentage": 100
     },
-    "configClient": "input/config-client/config-solid-%FACTOR-router%.json",
+    "configClient": "input/config-client/config-solid-default.json",
     "contextClient": "input/context-client.json",
     "additionalBinds": [],
     "clientPort": 3001,
