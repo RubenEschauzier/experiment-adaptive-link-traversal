@@ -5,8 +5,9 @@
   "@id": "urn:jbr:comunica-link-traversal-adaptive-routing-combinations",
   "@type": "FractionalCombinationProvider",
   "commonGenerated": true,
-  "factors": {
-    "fix": ["-fixed", "-fixed", ""],
-    "config": ["-no-bind", "", ""] 
-  }
+  "combinations": [
+    {"fix": "-fixed", "config": "-no-bind"},
+    {"fix": "-fixed", "config": ""},
+    {"fix": "", "config": ""}
+  ]
 }
