@@ -3,10 +3,10 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/jbr/^6.0.0/components/context.jsonld"
   ],
   "@id": "urn:jbr:comunica-link-traversal-adaptive-routing-combinations",
-  "@type": "FullFactorialCombinationProvider",
+  "@type": "FractionalCombinationProvider",
   "commonGenerated": true,
   "factors": {
-    "fix": ["-fixed", ""],
-    "config": ["-no-bind", "" ] 
+    "fix": ["-fixed", "-fixed", ""],
+    "config": ["-no-bind", "", ""] 
   }
 }
