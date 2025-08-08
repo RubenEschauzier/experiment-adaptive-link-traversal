@@ -6,7 +6,7 @@
   "@type": "FullFactorialCombinationProvider",
   "commonGenerated": true,
   "factors": {
-    "fix": ["", "-fixed"],
-    "config": ["", "-no-bind"] 
+    "fix": ["-fixed", ""],
+    "config": ["-no-bind", "" ] 
   }
 }
