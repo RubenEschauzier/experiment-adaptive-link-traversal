@@ -8,6 +8,7 @@
   "combinations": [
     {"fix": "-fixed", "config": "-no-bind"},
     {"fix": "-fixed", "config": ""},
-    {"fix": "", "config": ""}
+    {"fix": "", "config": ""},
+    {"fix": "-default-latest", "config": ""}
   ]
 }
