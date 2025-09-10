@@ -6,9 +6,8 @@
   "@type": "FractionalCombinationProvider",
   "commonGenerated": true,
   "combinations": [
-    {"fix": "-fixed", "config": "-no-bind"},
-    {"fix": "-fixed", "config": ""},
     {"fix": "", "config": ""},
+    {"fix": "-fix-regression", "config": ""},
     {"fix": "-default-latest", "config": ""}
   ]
 }
