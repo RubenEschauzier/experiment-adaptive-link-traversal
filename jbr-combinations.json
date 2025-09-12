@@ -7,7 +7,6 @@
   "commonGenerated": true,
   "combinations": [
     {"fix": "", "config": ""},
-    {"fix": "-fix-regression", "config": ""},
-    {"fix": "-default-latest", "config": ""}
+    {"fix": "-fixed", "config": ""}
   ]
 }

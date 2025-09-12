@@ -1,4 +1,4 @@
-FROM rubeneschauzier/comunica-feature-link-traversal-solid:solid-fix-5
+FROM rubeneschauzier/comunica-feature-link-traversal-solid:fix-limit
 
 ARG CONFIG_CLIENT
 ARG QUERY_TIMEOUT
