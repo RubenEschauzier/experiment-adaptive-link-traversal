@@ -1,4 +1,4 @@
-FROM rubeneschauzier/comunica-feature-link-traversal-stems-adaptive:latest
+FROM rubeneschauzier/comunica-feature-link-traversal-stems-adaptive:dev
 
 ARG CONFIG_CLIENT
 ARG QUERY_TIMEOUT
