@@ -6,6 +6,8 @@
   "@type": "FullFactorialCombinationProvider",
   "commonGenerated": true,
   "factors": {
-    "router": ["fixed", "lottery", "lottery-selectivity", "default"]
+    "router": ["fixed", "lottery", "lottery-selectivity", "default",
+      "default-no-bind", "default-no-bind-no-optimization",
+      "default-no-bind-no-nested", "default-no-bind-no-nested-no-optimization"]
   }
 }
