@@ -67,17 +67,11 @@
       }
     },
     {
-      "comment": "Taken from css:config/util/identifiers/suffix.json, changed to serve only .nq",
+      "comment": "Replaces the .nq only FixedIdentifierMapper config.",
       "@id": "urn:solid-server:default:FileIdentifierMapper",
-      "@type": "FixedContentTypeMapper",
-      "base": {
-        "@id": "urn:solid-server:default:variable:baseUrl"
-      },
-      "rootFilepath": {
-        "@id": "urn:solid-server:default:variable:rootFilePath"
-      },
-      "contentType": "application/n-quads",
-      "pathSuffix": ".nq"
+      "@type": "ExtensionBasedMapper",
+      "base": { "@id": "urn:solid-server:default:variable:baseUrl" },
+      "rootFilepath": { "@id": "urn:solid-server:default:variable:rootFilePath" }
     }
   ]
 }

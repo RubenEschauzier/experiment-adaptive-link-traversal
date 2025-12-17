@@ -1,0 +1,1 @@
+ curl -i -X GET   -H "Accept: text/turtle"   http://solidbench-server:3000/pods/00000000000000000065/
