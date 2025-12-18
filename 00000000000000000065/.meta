@@ -1,0 +1,7 @@
+@prefix derived: <urn:npm:solid:derived-resources:> .
+
+<http://solidbench-server:3000/pods/00000000000000000065/> derived:derivedResource [
+    derived:template "";
+    derived:selector <http://solidbench-server:3000/pods/00000000000000000065/*>;
+    derived:filter <http://solidbench-server:3000/pods/00000000000000000065/filters/user-post>
+  ].
