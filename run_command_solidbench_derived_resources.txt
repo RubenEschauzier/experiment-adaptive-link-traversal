@@ -1,0 +1,1 @@
+node --max-old-space-size=8192 ../../SolidBenchDerivedResources/bin/solidbench.js generate -e ../input/config-enhancer.json  -f ../input/config-fragmenter-derived-resources.json  -q ../input/config-queries.json  -v ../input/config-validation.json --verbose
