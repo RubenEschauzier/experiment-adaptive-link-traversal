@@ -473,17 +473,42 @@
           "/settings/",
           "/noise/"
         ],
-        "filterFilename": "filters/filter-:COUNT:",
+        "filterFilename": "filters/filter-typed:COUNT:",
         "authoritativenessStrategy": "baseUri",
         "metadataQuadsGenerator": {
           "@type": "DerivedResourceMetadataGenerator",
           "derivedNamespace": "urn:npm:solid:derived-resources:",
           "metaFilename": ".meta",
-          "templatesTemplate": "resources/resource-:COUNT:"
+          "templatesTemplate": "resources/resource-typed:COUNT:"
         },
         "directMetadataLinkPredicate": "http://www.w3.org/2007/05/powder-s#describedby",
         "profilePredicateRegex": "vocabulary/hasCreator$",
         "podBaseUriExtractionRegex": "^(.+\/pods\/[0-9]+\/)"
+      },
+      {
+        "@type": "FragmentationStrategyDatasetSummaryDerivedResourceCsetValues",
+        "derivedResourceConstructionStrategy": "maxSize",
+        "maxResources": 10,
+        "variableReplacementIndicator": "urn:var:",
+        "authoritativenessStrategy": "baseUri",
+        "iriToPath": {
+          "http://": "out-fragments/http/",
+          "https://": "out-fragments/https/"
+        },
+        "datasetPatterns": [
+          "^(.+\/pods\/[0-9]+\/)"
+        ],
+        "exclusionPatterns": [
+          "/settings/",
+          "/noise/"
+        ],
+        "filterFilename": "filters/filter-cset:COUNT:",
+        "metadataQuadsGenerator": {
+          "@type": "DerivedResourceMetadataGenerator",
+          "derivedNamespace": "urn:npm:solid:derived-resources:",
+          "metaFilename": ".meta",
+          "templatesTemplate": "resources/resource-cset:COUNT:"
+        }
       },
       {
         "@type": "FragmentationStrategyDatasetSummaryDerivedResourceQpf",
