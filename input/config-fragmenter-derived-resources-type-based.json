@@ -528,6 +528,27 @@
           "http://": "out-fragments/http/",
           "https://": "out-fragments/https/"
         }
+      },
+      {
+        "@type": "FragmentationStrategyDatasetSummaryDerivedResourcePredicateTemplate",
+        "maxSizeStars": 8,
+        "datasetPatterns": [
+          "^(.+\/pods\/[0-9]+\/)"
+        ],
+        "exclusionPatterns": [
+        ],
+        "filterFilename": "filters/filter-star-template-:COUNT:",
+        "metadataQuadsGenerator": {
+          "@type": "TemplateDerivedResourceMetadataGenerator",
+          "derivedNamespace": "urn:npm:solid:derived-resources:",
+          "metaFilename": ".meta",
+          "templatesTemplate": "resources/resource-star-template-:COUNT:",
+          "variableTemplate": "p:COUNT:"
+        },
+        "iriToPath": {
+          "http://": "out-fragments/http/",
+          "https://": "out-fragments/https/"
+        }
       }
     ]
   },
