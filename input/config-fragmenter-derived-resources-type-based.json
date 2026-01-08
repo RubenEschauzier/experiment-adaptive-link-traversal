@@ -481,9 +481,17 @@
           "metaFilename": ".meta",
           "templatesTemplate": "resources/resource-typed:COUNT:"
         },
+        "selectorPatterns": [
+          "**/*.ttl",
+          "**/*.nq"
+        ],
         "directMetadataLinkPredicate": "http://www.w3.org/2007/05/powder-s#describedby",
         "profilePredicateRegex": "vocabulary/hasCreator$",
-        "podBaseUriExtractionRegex": "^(.+\/pods\/[0-9]+\/)"
+        "podBaseUriExtractionRegex": "^(.+\/pods\/[0-9]+\/)",
+        "iriToPath": {
+          "http://": "out-fragments/http/",
+          "https://": "out-fragments/https/"
+        }
       },
       {
         "@type": "FragmentationStrategyDatasetSummaryDerivedResourceCsetValues",
@@ -491,10 +499,6 @@
         "maxResources": 10,
         "variableReplacementIndicator": "urn:var:",
         "authoritativenessStrategy": "baseUri",
-        "iriToPath": {
-          "http://": "out-fragments/http/",
-          "https://": "out-fragments/https/"
-        },
         "datasetPatterns": [
           "^(.+\/pods\/[0-9]+\/)"
         ],
@@ -508,6 +512,14 @@
           "derivedNamespace": "urn:npm:solid:derived-resources:",
           "metaFilename": ".meta",
           "templatesTemplate": "resources/resource-cset:COUNT:"
+        },
+        "selectorPatterns": [
+          "**/*.ttl",
+          "**/*.nq"
+        ],
+        "iriToPath": {
+          "http://": "out-fragments/http/",
+          "https://": "out-fragments/https/"
         }
       },
       {
@@ -524,6 +536,10 @@
           "metaFilename": ".meta",
           "templatesTemplate": "resources/resource-qpf-:COUNT:"
         },
+        "selectorPatterns": [
+          "**/*.ttl",
+          "**/*.nq"
+        ],
         "iriToPath": {
           "http://": "out-fragments/http/",
           "https://": "out-fragments/https/"
@@ -545,6 +561,10 @@
           "templatesTemplate": "resources/resource-star-template-:COUNT:",
           "variableTemplate": "p:COUNT:"
         },
+        "selectorPatterns": [
+          "**/*.ttl",
+          "**/*.nq"
+        ],
         "iriToPath": {
           "http://": "out-fragments/http/",
           "https://": "out-fragments/https/"
@@ -556,24 +576,6 @@
     "@id": "urn:rdf-dataset-fragmenter:sink:default",
     "@type": "QuadSinkComposite",
     "sinks": [
-      {
-        "@type": "QuadSinkFiltered",
-        "filter": {
-          "@type": "QuadMatcherTermValue",
-          "term": "subject",
-          "regex": "urn:var:"
-        },        
-        "sink": {
-          "@type": "QuadSinkSparqlFile",
-          "outputFormat": "application/sparql-query",
-          "fileExtension": ".rq",
-          "variableReplacementIndicator": "urn:var:",
-          "iriToPath": {
-            "http://": "out-fragments/http/",
-            "https://": "out-fragments/https/"
-          }
-        }
-      },
       {
         "@type": "QuadSinkFiltered",
         "filter": {

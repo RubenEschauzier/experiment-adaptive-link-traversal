@@ -1,1 +1,1 @@
-node ~/projects/derived-resources-adaptive-querying/solidbench-derived-resources/bin/solidbench.js serve -r out-fragments/http/solidbench-server_3000/ -b http://solidbench-server:3000 -c ../input/config-server.json
+node ~/projects/query-derived-resources/solidbench-derived-resources/bin/solidbench.js serve -r out-fragments/http/solidbench-server_3000/ -b http://solidbench-server:3000 -c ../input/config-server.json
