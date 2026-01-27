@@ -1,0 +1,12 @@
+For QPF object = Person
+curl "http://solidbench-server:3000/pods/00000000000000000065/resources/resource-qpf-0?o=http%3A%2F%2Fsolidbench-server%3A3000%2Fwww.ldbc.eu%2Fldbc_socialnet%2F1.0%2Fvocabulary%2FPerson"
+
+For non parameter derived resource:
+curl -i -X GET -H "Accept: text/turtle" "http://solidbench-server:3000/pods/00000000000000000065/resources/resource-cset2"
+
+For parameterized derived resource
+curl -i -H "Accept: text/turtle" "http://solidbench-server:3000/pods/00000000000000000065/resources/resource-star-template-2/%3Chttp%3A%2F%2Fsolidbench-server%3A3000%2Fwww.ldbc.eu%2Fldbc_socialnet%2F1.0%2Fvocabulary%2FhasCreator%3E/%3Chttp%3A%2F%2Fsolidbench-server%3A3000%2Fwww.ldbc.eu%2Fldbc_socialnet%2F1.0%2Fvocabulary%2FcreationDate%3E"
+Which has parameters
+<http://solidbench-server:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/hasCreator> 
+<http://solidbench-server:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/creationDate>
+WITH the <>
