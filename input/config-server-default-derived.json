@@ -70,11 +70,13 @@
       "base": { "@id": "urn:solid-server:default:variable:baseUrl" }
     },
     {
-      "comment": "Replaces the .nq only FixedIdentifierMapper config.",
+      "comment": "Only required when using a file-based backend.",
       "@id": "urn:solid-server:default:FileIdentifierMapper",
-      "@type": "ExtensionBasedMapper",
+      "@type": "FixedContentTypeMapper",
       "base": { "@id": "urn:solid-server:default:variable:baseUrl" },
-      "rootFilepath": { "@id": "urn:solid-server:default:variable:rootFilePath" }
+      "rootFilepath": { "@id": "urn:solid-server:default:variable:rootFilePath" },
+      "contentType": "application/n-quads",
+      "pathSuffix": ".nq"
     }
   ]
 }

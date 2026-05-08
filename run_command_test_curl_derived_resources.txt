@@ -10,3 +10,5 @@ Which has parameters
 <http://solidbench-server:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/hasCreator> 
 <http://solidbench-server:3000/www.ldbc.eu/ldbc_socialnet/1.0/vocabulary/creationDate>
 WITH the <>
+
+curl -i -X GET -H "Accept: text/turtle" "http://solidbench-server:3000/pods/00000000000000000065/posts"
