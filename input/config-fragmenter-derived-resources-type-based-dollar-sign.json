@@ -609,7 +609,7 @@
             "@type": "QuadSinkFile",
             "log": true,
             "outputFormat": "application/n-quads",
-            "fileExtension": ".nq",
+            "fileExtension": "$.nq",
             "iriToPath": {
               "http://": "out-fragments/http/",
               "https://": "out-fragments/https/"
