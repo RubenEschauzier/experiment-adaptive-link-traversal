@@ -460,69 +460,6 @@
         "@type": "FragmentationStrategySubject"
       },
       {
-        "@type": "FragmentationStrategyDatasetSummaryDerivedResourceStarTypes",
-        "typePredicateMatcher": {
-          "@type": "QuadMatcherPredicate",
-          "predicateRegex": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type$"
-        },
-        "variableReplacementIndicator": "urn:var:",
-        "datasetPatterns": [
-          "^(.+\/pods\/[0-9]+\/)"
-        ],
-        "exclusionPatterns": [
-          "/settings/",
-          "/noise/"
-        ],
-        "filterFilename": "filters/filter-typed:COUNT:",
-        "authoritativenessStrategy": "baseUri",
-        "metadataQuadsGenerator": {
-          "@type": "DerivedResourceMetadataGenerator",
-          "derivedNamespace": "urn:npm:solid:derived-resources:",
-          "metaFilename": ".meta",
-          "templatesTemplate": "resources/resource-typed:COUNT:"
-        },
-        "selectorPatterns": [
-          "**/*.ttl",
-          "**/*.nq"
-        ],
-        "directMetadataLinkPredicate": "http://www.w3.org/2007/05/powder-s#describedby",
-        "profilePredicateRegex": "vocabulary/hasCreator$",
-        "podBaseUriExtractionRegex": "^(.+\/pods\/[0-9]+\/)",
-        "iriToPath": {
-          "http://": "out-fragments/http/",
-          "https://": "out-fragments/https/"
-        }
-      },
-      {
-        "@type": "FragmentationStrategyDatasetSummaryDerivedResourceCsetValues",
-        "derivedResourceConstructionStrategy": "maxSize",
-        "maxResources": 10,
-        "variableReplacementIndicator": "urn:var:",
-        "authoritativenessStrategy": "baseUri",
-        "datasetPatterns": [
-          "^(.+\/pods\/[0-9]+\/)"
-        ],
-        "exclusionPatterns": [
-          "/settings/",
-          "/noise/"
-        ],
-        "filterFilename": "filters/filter-cset:COUNT:",
-        "metadataQuadsGenerator": {
-          "@type": "DerivedResourceMetadataGenerator",
-          "derivedNamespace": "urn:npm:solid:derived-resources:",
-          "metaFilename": ".meta",
-          "templatesTemplate": "resources/resource-cset:COUNT:"
-        },
-        "selectorPatterns": [
-          "**/*.ttl",
-          "**/*.nq"
-        ],
-        "iriToPath": {
-          "http://": "out-fragments/http/",
-          "https://": "out-fragments/https/"
-        }
-      },
-      {
         "@type": "FragmentationStrategyDatasetSummaryDerivedResourceQpf",
         "datasetPatterns": [
           "^(.+\/pods\/[0-9]+\/)"
@@ -546,8 +483,11 @@
         }
       },
       {
-        "@type": "FragmentationStrategyDatasetSummaryDerivedResourceTemplate",
-        "maxSizeStars": 8,
+        "@type": "FragmentationStrategyDatasetSummaryDerivedResourceStarTemplate",
+        "minSizeConstruct": 1,
+        "maxSizeConstruct": 1,
+        "minSizeSelect": 2,
+        "maxSizeSelect": 10,
         "datasetPatterns": [
           "^(.+\/pods\/[0-9]+\/)"
         ],
@@ -559,6 +499,36 @@
           "derivedNamespace": "urn:npm:solid:derived-resources:",
           "metaFilename": ".meta",
           "templatesTemplate": "resources/resource-star-template-:COUNT:",
+          "variableTemplate": "p:COUNT:"
+        },
+        "selectorPatterns": [
+          "**/*.ttl",
+          "**/*.nq"
+        ],
+        "directMetadataLinkPredicate": "http://www.w3.org/2007/05/powder-s#describedby",
+        "profilePredicateRegex": "vocabulary/hasCreator$",
+        "podBaseUriExtractionRegex": "^(.+\/pods\/[0-9]+\/)",
+        "fileMetadataLinkPredicate": "https://knows.idlab.ugent.be/vocab/derived#definedBy",
+        "iriToPath": {
+          "http://": "out-fragments/http/",
+          "https://": "out-fragments/https/"
+        }
+      },
+      {
+        "@type": "FragmentationStrategyDatasetSummaryDerivedResourceLinearTemplate",
+        "minSizeSelect": 2,
+        "maxSizeSelect": 4,
+        "datasetPatterns": [
+          "^(.+\/pods\/[0-9]+\/)"
+        ],
+        "exclusionPatterns": [
+        ],
+        "filterFilename": "filters/filter-linear-template-:COUNT:",
+        "metadataQuadsGenerator": {
+          "@type": "TemplateDerivedResourceMetadataGenerator",
+          "derivedNamespace": "urn:npm:solid:derived-resources:",
+          "metaFilename": ".meta",
+          "templatesTemplate": "resources/resource-linear-template-:COUNT:",
           "variableTemplate": "p:COUNT:"
         },
         "selectorPatterns": [
