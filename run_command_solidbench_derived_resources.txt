@@ -1,1 +1,3 @@
 node --max-old-space-size=8192 ../../solidbench-derived-resources/bin/solidbench.js generate -e ../input/config-enhancer.json  -f ../input/config-fragmenter-derived-resources-type-based.json  -q ../input/config-queries.json  -v ../input/config-validation.json --verbose
+# Afterwards, from the experiment root: one HDT index per pod in generated/out-hdt/pods
+npm run generate:hdt
